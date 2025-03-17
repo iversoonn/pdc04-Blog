@@ -182,4 +182,15 @@ class CommentController extends Controller
 			Yii::app()->end();
 		}
 	}
+	public function actionApprove($id)
+	{
+		if(Yii::app()->request->isPostRequest)
+		{
+			$comment=$this->loadModel($id);
+			$comment->approve();
+			$this->redirect(array('index'));
+		}
+		else
+			throw new CHttpException(400,'Invalid request...');
+	}
 }

@@ -1,43 +1,47 @@
-<?php
-/* @var $this CommentController */
-/* @var $data Comment */
-?>
+<div class="bg-white p-6 rounded-lg shadow-md mb-4">
 
-<div class="view">
+  <!-- Comment Header -->
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-xl font-semibold text-[#b08968] flex items-center">
+      <i class="fas fa-comment-dots mr-3"></i> Comment #<?php echo CHtml::encode($data->id); ?>
+    </h2>
+    <a href="<?php echo CHtml::normalizeUrl(array('view', 'id' => $data->id)); ?>" 
+       class="text-sm text-gray-500 hover:text-[#b08968]">
+      View Details
+    </a>
+  </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
-	<br />
+  <!-- Comment Content -->
+  <p class="text-gray-800 mb-4">
+    <?php echo nl2br(CHtml::encode($data->content)); ?>
+  </p>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('content')); ?>:</b>
-	<?php echo CHtml::encode($data->content); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
-	<?php echo CHtml::encode($data->status); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('create_time')); ?>:</b>
-	<?php echo CHtml::encode($data->create_time); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('author')); ?>:</b>
-	<?php echo CHtml::encode($data->author); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('email')); ?>:</b>
-	<?php echo CHtml::encode($data->email); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('url')); ?>:</b>
-	<?php echo CHtml::encode($data->url); ?>
-	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('post_id')); ?>:</b>
-	<?php echo CHtml::encode($data->post_id); ?>
-	<br />
-
-	*/ ?>
+  <!-- Comment Meta Info -->
+  <div class="grid grid-cols-2 gap-4 text-sm text-gray-600">
+    <div>
+      <span class="font-medium">Status:</span> 
+      <span class="text-gray-800"><?php echo CHtml::encode($data->status); ?></span>
+    </div>
+    <div>
+      <span class="font-medium">Created:</span> 
+      <span class="text-gray-800"><?php echo date('F j, Y \a\t h:i A', $data->create_time); ?></span>
+    </div>
+    <div>
+      <span class="font-medium">Author:</span> 
+      <span class="text-gray-800"><?php echo CHtml::encode($data->author); ?></span>
+    </div>
+    <div>
+      <span class="font-medium">Email:</span> 
+      <span class="text-gray-800"><?php echo CHtml::encode($data->email); ?></span>
+    </div>
+    <?php if (!empty($data->url)) : ?>
+      <div class="col-span-2">
+        <span class="font-medium">URL:</span>
+        <a href="<?php echo CHtml::encode($data->url); ?>" target="_blank" class="text-[#b08968] hover:underline">
+          <?php echo CHtml::encode($data->url); ?>
+        </a>
+      </div>
+    <?php endif; ?>
+  </div>
 
 </div>

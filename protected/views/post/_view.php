@@ -3,41 +3,41 @@
 /* @var $data Post */
 ?>
 
-<div class="view">
+<div class="bg-white p-6 rounded-lg shadow-md mb-6">
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
-	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
-	<br />
+  <!-- Post ID and Title -->
+  <div class="flex justify-between items-center mb-4">
+    <h2 class="text-2xl font-semibold text-[#b08968]">
+      <i class="fas fa-file-alt mr-2"></i>
+      <?php echo CHtml::encode($data->title); ?>
+    </h2>
+    <a href="<?php echo CHtml::normalizeUrl(array('view', 'id' => $data->id)); ?>" 
+       class="text-[#8c6a52] hover:text-[#b08968]">
+      <i class="fas fa-eye"></i> View Post
+    </a>
+  </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b>
-	<?php echo CHtml::encode($data->title); ?>
-	<br />
+  <!-- Post Content -->
+  <p class="text-gray-700 mb-4">
+    <?php echo nl2br(CHtml::encode($data->content)); ?>
+  </p>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('content')); ?>:</b>
-	<?php echo CHtml::encode($data->content); ?>
-	<br />
+  <!-- Tags -->
+  <div class="mb-4">
+    <span class="text-sm text-gray-600"><i class="fas fa-tags mr-1"></i> Tags:</span>
+    <span class="text-sm text-[#b08968] font-medium"><?php echo CHtml::encode($data->tags); ?></span>
+  </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('tags')); ?>:</b>
-	<?php echo CHtml::encode($data->tags); ?>
-	<br />
+  <!-- Status -->
+  <div class="mb-4">
+    <span class="text-sm text-gray-600"><i class="fas fa-clipboard-check mr-1"></i> Status:</span>
+    <span class="text-sm text-[#b08968] font-medium"><?php echo CHtml::encode($data->status); ?></span>
+  </div>
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('status')); ?>:</b>
-	<?php echo CHtml::encode($data->status); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('create_time')); ?>:</b>
-	<?php echo CHtml::encode($data->create_time); ?>
-	<br />
-
-	<b><?php echo CHtml::encode($data->getAttributeLabel('update_time')); ?>:</b>
-	<?php echo CHtml::encode($data->update_time); ?>
-	<br />
-
-	<?php /*
-	<b><?php echo CHtml::encode($data->getAttributeLabel('author_id')); ?>:</b>
-	<?php echo CHtml::encode($data->author_id); ?>
-	<br />
-
-	*/ ?>
+  <!-- Timestamps -->
+  <div class="text-sm text-gray-500">
+    <i class="fas fa-clock mr-1"></i> Created: <?php echo date('F j, Y \a\t h:i a', $data->create_time); ?> |
+    Updated: <?php echo date('F j, Y \a\t h:i a', $data->update_time); ?>
+  </div>
 
 </div>

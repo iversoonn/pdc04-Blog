@@ -1,59 +1,100 @@
 <?php /* @var $this Controller */ ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="language" content="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    textarea {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      outline: none;
+      width: 100%;
+      color: #333;
+      padding: 8px 0;
+      transition: border-color 0.3s;
+    }
 
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print">
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection">
-	<![endif]-->
+    input:focus,
+    textarea:focus {
+      border-bottom-color: #b08968;
+    }
 
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
+    button {
+      background-color: #b08968;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+    button:hover {
+      background-color: #8c6a52;
+    }
+
+    a {
+      color: #b08968;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #8c6a52;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-[#f5f5f5] text-[#333] font-sans">
 
-<div class="container" id="page">
+  <!-- Header with Gradient -->
+  <header class="bg-gradient-to-r from-[#b08968] to-[#8c6a52] text-white py-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold"><?php echo CHtml::encode(Yii::app()->name); ?></h1>
+      <nav>
+        <?php $this->widget('zii.widgets.CMenu', array(
+          'items' => array(
+            array('label' => '<i class="fas fa-home"></i> Home', 'url' => array('/post/index')),
+            array('label' => '<i class="fas fa-info-circle"></i> About', 'url' => array('/site/page', 'view' => 'about')),
+            array('label' => '<i class="fas fa-envelope"></i> Contact', 'url' => array('/site/contact')),
+            array('label' => '<i class="fas fa-sign-in-alt"></i> Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
+            array('label' => '<i class="fas fa-sign-out-alt"></i> Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
+          ),
+          'encodeLabel' => false,
+          'htmlOptions' => array('class' => 'flex space-x-6')
+        )); ?>
+      </nav>
+    </div>
+  </header>
 
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
+  <!-- Breadcrumbs -->
+  <?php if (isset($this->breadcrumbs)): ?>
+    <div class="container mx-auto my-4 text-sm text-[#777]">
+      <?php $this->widget('zii.widgets.CBreadcrumbs', array('links' => $this->breadcrumbs)); ?>
+    </div>
+  <?php endif; ?>
 
-	<div id="mainmenu">
-		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
-				array('label'=>'Home', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
-			),
-		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
+  <!-- Main Content -->
+  <main class="container mx-auto my-8 p-6 bg-white rounded-lg shadow-md">
+    <?php echo $content; ?>
+  </main>
 
-	<?php echo $content; ?>
-
-	<div class="clear"></div>
-
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
-
-</div><!-- page -->
+  <!-- Footer with Gradient -->
+  <footer class="bg-gradient-to-r from-[#b08968] to-[#8c6a52] text-white text-center py-4 mt-10">
+    <p>&copy; <?php echo date('Y'); ?> by My Company. All Rights Reserved.</p>
+    <p><?php echo Yii::powered(); ?></p>
+  </footer>
 
 </body>
+
 </html>
