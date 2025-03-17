@@ -27,16 +27,7 @@ class CommentController extends Controller
 	public function accessRules()
 	{
 		return array(
-			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-			),
-			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
-				'users'=>array('@'),
-			),
-			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+			array('allow', // allow authenticated users to access all actions
 				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
@@ -66,7 +57,7 @@ class CommentController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+		
 		if(isset($_POST['Comment']))
 		{
 			$model->attributes=$_POST['Comment'];
@@ -77,6 +68,27 @@ class CommentController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
+		
+		// if (isset($_POST['Comment'])) {
+		// 	$model->attributes = $_POST['Comment'];
+		
+		// 	// Ensure that post_id is set. If not provided, assign a default valid ID.
+		// 	// if (empty($model->post_id)) {
+		// 	// 	$model->post_id = $post_id; // Replace '1' with an existing valid post ID from your tbl_post.
+		// 	// }
+		
+		// 	// Attempt to save the model and handle errors.
+		// 	if ($model->save()) {
+		// 		$this->redirect(array('view', 'id' => $model->id));
+		// 	} else {
+		// 		// Display errors for debugging
+		// 		var_dump($model->getErrors());
+		// 	}
+		// }
+		
+		// $this->render('create', array(
+		// 	'model' => $model,
+		// ));
 	}
 
 	/**

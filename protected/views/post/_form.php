@@ -5,7 +5,7 @@
 ?>
 
 <div class="form">
-
+	
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'post-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
@@ -14,6 +14,7 @@
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
+<?php echo $form->dropDownList($model,'status',Lookup::items('PostStatus')); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
