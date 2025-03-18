@@ -26,11 +26,7 @@
   </div>
 
   <!-- Search Section -->
-  <p class="text-sm text-[#555] mb-4">
-    You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b>, or <b>=</b>)
-    at the beginning of each of your search values to specify how the comparison should be done.
-  </p>
-
+  
   <button class="search-button bg-[#b08968] text-white px-4 py-2 rounded hover:bg-[#8c6a52] mb-4">
     Advanced Search
   </button>

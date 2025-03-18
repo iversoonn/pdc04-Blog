@@ -13,10 +13,7 @@
   </nav>
 
   <!-- Filter & Advanced Search -->
-  <p class="text-sm text-gray-700 mb-4">
-    You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>&lt;&gt;</b> or <b>=</b>) at the beginning of each of your search values to specify how the comparison should be done.
-  </p>
-
+  
   <button class="search-button bg-[#b08968] text-white py-2 px-4 rounded-md hover:bg-[#8b6b54] transition mb-4">
     <i class="fas fa-search mr-2"></i> Advanced Search
   </button>
