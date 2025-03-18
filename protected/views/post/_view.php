@@ -29,10 +29,24 @@
   </div>
 
   <!-- Status -->
-  <div class="mb-4">
+<div class="mb-4">
     <span class="text-sm text-gray-600"><i class="fas fa-clipboard-check mr-1"></i> Status:</span>
-    <span class="text-sm text-[#b08968] font-medium"><?php echo CHtml::encode($data->status); ?></span>
-  </div>
+    <span class="text-sm font-medium 
+        <?php 
+            echo ($data->status == 1) ? 'text-yellow-500' : 
+                 (($data->status == 2) ? 'text-green-600' : 
+                 (($data->status == 3) ? 'text-red-500' : 'text-gray-500'));
+        ?>">
+        <?php 
+            $statusLabels = [
+                1 => 'Draft',
+                2 => 'Published',
+                3 => 'Archived'
+            ];
+            echo isset($statusLabels[$data->status]) ? $statusLabels[$data->status] : 'Unknown Status';
+        ?>
+    </span>
+</div>
 
   <!-- Timestamps -->
   <div class="text-sm text-gray-500">

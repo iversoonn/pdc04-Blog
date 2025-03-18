@@ -25,11 +25,14 @@
     <?php echo $form->error($model,'content', ['class' => 'text-red-500 text-sm mt-2']); ?>
   </div>
 
-  <!-- Status Field -->
+  <!-- Status Dropdown -->
   <div class="mb-6">
-    <?php echo $form->labelEx($model,'status', ['class' => 'block text-gray-700 font-medium mb-2']); ?>
-    <?php echo $form->textField($model,'status', ['class' => 'w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#b08968]']); ?>
-    <?php echo $form->error($model,'status', ['class' => 'text-red-500 text-sm mt-2']); ?>
+      <?php echo $form->labelEx($model, 'status', ['class' => 'block text-gray-700 font-medium mb-2']); ?>
+      <?php echo $form->dropDownList($model, 'status', [
+          1 => 'Pending Approval',
+          2 => 'Approved'
+      ], ['class' => 'w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#b08968] bg-white']); ?>
+      <?php echo $form->error($model, 'status', ['class' => 'text-red-500 text-sm mt-2']); ?>
   </div>
 
   <!-- Author Field -->
@@ -47,11 +50,11 @@
   </div>
 
   <!-- URL Field -->
-  <div class="mb-6">
+  <!-- <div class="mb-6">
     <?php echo $form->labelEx($model,'url', ['class' => 'block text-gray-700 font-medium mb-2']); ?>
     <?php echo $form->textField($model,'url', ['class' => 'w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#b08968]']); ?>
     <?php echo $form->error($model,'url', ['class' => 'text-red-500 text-sm mt-2']); ?>
-  </div>
+  </div> -->
 
   <!-- Submit Button -->
   <div class="flex justify-between items-center">

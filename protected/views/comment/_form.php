@@ -19,18 +19,18 @@
   </div>
 
   <!-- Status Field -->
-  <div class="mb-6">
+  <!-- <div class="mb-6">
     <?php echo $form->labelEx($model, 'status', array('class' => 'block text-gray-700 font-medium mb-2')); ?>
-    <?php echo $form->textField($model, 'status', array('class' => 'w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b08968]')); ?>
+    <?php echo $form->dropDownList($model, 'status', Lookup::items('PostStatus'), array('class' => 'w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b08968] bg-white')); ?>
     <?php echo $form->error($model, 'status', array('class' => 'text-red-500 text-sm')); ?>
-  </div>
+  </div> -->
 
   <!-- Create Time -->
-  <div class="mb-6">
+  <!-- <div class="mb-6">
     <?php echo $form->labelEx($model, 'create_time', array('class' => 'block text-gray-700 font-medium mb-2')); ?>
     <?php echo $form->textField($model, 'create_time', array('class' => 'w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b08968]')); ?>
     <?php echo $form->error($model, 'create_time', array('class' => 'text-red-500 text-sm')); ?>
-  </div>
+  </div> -->
 
   <!-- Author -->
   <div class="mb-6">
@@ -47,18 +47,18 @@
   </div>
 
   <!-- URL -->
-  <div class="mb-6">
+  <!-- <div class="mb-6">
     <?php echo $form->labelEx($model, 'url', array('class' => 'block text-gray-700 font-medium mb-2')); ?>
     <?php echo $form->textField($model, 'url', array('size' => 60, 'maxlength' => 128, 'class' => 'w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b08968]')); ?>
     <?php echo $form->error($model, 'url', array('class' => 'text-red-500 text-sm')); ?>
-  </div>
+  </div> -->
 
   <!-- Post ID -->
-  <div class="mb-6">
+  <!-- <div class="mb-6">
     <?php echo $form->labelEx($model, 'post_id', array('class' => 'block text-gray-700 font-medium mb-2')); ?>
     <?php echo $form->textField($model, 'post_id', array('class' => 'w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b08968]')); ?>
     <?php echo $form->error($model, 'post_id', array('class' => 'text-red-500 text-sm')); ?>
-  </div>
+  </div> -->
 
   <!-- Submit Button -->
   <div class="text-center">

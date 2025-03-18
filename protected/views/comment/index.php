@@ -6,14 +6,11 @@
   </h2>
 
   <!-- Action Buttons -->
-  <div class="flex justify-between mb-6">
-    <a href="<?php echo CHtml::normalizeUrl(array('create')); ?>" class="px-4 py-2 bg-[#b08968] text-white rounded-md hover:bg-[#00000] flex items-center">
-      <i class="fas fa-plus mr-2"></i> Create Comment
-    </a>
+  <div class="flex justify-end mb-6">
     <a href="<?php echo CHtml::normalizeUrl(array('admin')); ?>" class="text-gray-600 hover:text-gray-800 flex items-center">
       <i class="fas fa-cogs mr-2"></i> Manage Comments
     </a>
-  </div>
+</div>
 
   <!-- Comment List View -->
   <div class="space-y-4">

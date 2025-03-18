@@ -48,8 +48,20 @@
       <?php echo date('F j, Y \a\t h:i a', $model->create_time); ?>
     </p>
     <p class="text-sm text-gray-600">
-      <i class="fas fa-clipboard-check mr-1"></i> Status: 
-      <span class="text-[#b08968] font-medium"><?php echo CHtml::encode($model->status); ?></span>
+    <i class="fas fa-clipboard-check mr-1"></i> Status: 
+    <span class="
+        <?php 
+            echo ($model->status == 1) ? 'text-yellow-500' : 
+                 (($model->status == 2) ? 'text-green-600' : 'text-gray-500'); 
+        ?> font-medium">
+        <?php 
+            $statusLabels = [
+                1 => 'Pending Approval',
+                2 => 'Approved'
+            ];
+            echo isset($statusLabels[$model->status]) ? $statusLabels[$model->status] : 'Unknown Status';
+        ?>
+    </span>
     </p>
     <p class="text-sm text-gray-600">
       <i class="fas fa-file-alt mr-1"></i> Post ID: 

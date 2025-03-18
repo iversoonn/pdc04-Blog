@@ -20,8 +20,20 @@
   <div class="grid grid-cols-2 gap-4 text-sm text-gray-600">
     <div>
       <span class="font-medium">Status:</span> 
-      <span class="text-gray-800"><?php echo CHtml::encode($data->status); ?></span>
-    </div>
+      <span class="
+          <?php 
+              echo ($data->status == 1) ? 'text-yellow-500' : 
+                  (($data->status == 2) ? 'text-green-600' : 'text-gray-500'); 
+          ?>">
+          <?php 
+              $statusLabels = [
+                  1 => 'Pending Approval',
+                  2 => 'Approved'
+              ];
+              echo isset($statusLabels[$data->status]) ? $statusLabels[$data->status] : 'Unknown Status';
+          ?>
+      </span>
+  </div>
     <div>
       <span class="font-medium">Created:</span> 
       <span class="text-gray-800"><?php echo date('F j, Y \a\t h:i A', $data->create_time); ?></span>
