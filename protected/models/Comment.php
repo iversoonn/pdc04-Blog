@@ -41,8 +41,8 @@ class Comment extends CActiveRecord
             ['author, email, url', 'length', 'max'=>128],
             ['email', 'email'],
             ['url', 'url'],
-            ['status', 'numerical', 'integerOnly' => true], // ✅ Ensure `status` is treated as an integer
-            ['status', 'in', 'range' => [1, 2]], // ✅ Ensure `status` is only 1 (Pending) or 2 (Approved)
+            ['status', 'numerical', 'integerOnly' => true], 
+            ['status', 'in', 'range' => [1, 2]], 
         ];
     }
 
