@@ -17,11 +17,20 @@
   <button class="search-button bg-[#b08968] text-white py-2 px-4 rounded-md hover:bg-[#8b6b54] transition mb-4">
     <i class="fas fa-search mr-2"></i> Advanced Search
   </button>
-
+  
   <div class="search-form hidden mb-6">
     <?php $this->renderPartial('_search', array('model' => $model)); ?>
   </div>
-
+  
+  <!-- Navigation Links -->
+  <div class="flex justify-between mt-6 text-[#b08968]">
+    <a href="<?php echo CHtml::normalizeUrl(array('index')); ?>" class="flex items-center hover:text-[#b08968]">
+      <i class="fas fa-list mr-2"></i> List Comments
+    </a>
+    <!-- <a href="<?php echo CHtml::normalizeUrl(array('create')); ?>" class="flex items-center hover:text-[#b08968]">
+      <i class="fas fa-plus-circle mr-2"></i> Create Comment
+    </a> -->
+  </div>
   <!-- Comments Grid -->
 <div class="overflow-x-auto">
   <?php $this->widget('zii.widgets.grid.CGridView', array(
@@ -91,14 +100,6 @@
 </div>
 
 
-  <!-- Navigation Links -->
-  <div class="flex justify-between mt-6 text-gray-600">
-    <a href="<?php echo CHtml::normalizeUrl(array('index')); ?>" class="flex items-center hover:text-[#b08968]">
-      <i class="fas fa-list mr-2"></i> List Comments
-    </a>
-    <a href="<?php echo CHtml::normalizeUrl(array('create')); ?>" class="flex items-center hover:text-[#b08968]">
-      <i class="fas fa-plus-circle mr-2"></i> Create Comment
-    </a>
-  </div>
+  
 
 </div>

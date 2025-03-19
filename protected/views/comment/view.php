@@ -11,11 +11,15 @@
       <i class="fas fa-comment-alt mr-2"></i>
       Comment #<?php echo $model->id; ?>
     </h2>
-    <a href="<?php echo CHtml::normalizeUrl(array('delete', 'id' => $model->id)); ?>" 
-       class="text-red-500 hover:text-red-700"
-       onclick="return confirm('Are you sure you want to delete this item?');">
-      <i class="fas fa-trash-alt"></i> Delete
-    </a>
+    <?php echo CHtml::link(
+    '<i class="fas fa-trash-alt text-red-500"></i> Delete',
+    '#',
+    array(
+        'submit' => array('delete', 'id' => $model->id),
+        'confirm' => 'Are you sure you want to delete this item?',
+        'class' => 'text-red-500 hover:text-red-700',
+    )
+); ?>
   </div>
 
   <!-- Comment Content -->

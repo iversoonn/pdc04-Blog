@@ -6,8 +6,8 @@
   </h2>
 
   <!-- Action Buttons -->
-  <div class="flex justify-end mb-6">
-    <a href="<?php echo CHtml::normalizeUrl(array('admin')); ?>" class="text-gray-600 hover:text-gray-800 flex items-center">
+  <div class="flex justify mb-6 ">
+    <a href="<?php echo CHtml::normalizeUrl(array('admin')); ?>" class="text-[#b08968] hover:text-gray-800 flex items-center">
       <i class="fas fa-cogs mr-2"></i> Manage Comments
     </a>
 </div>

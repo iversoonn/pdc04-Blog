@@ -2103,3 +2103,936 @@ in C:\xampp\htdocs\yiiblog\index.php (13)
 2025/03/18 16:44:13 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
 in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (93)
 in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:06:22 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (93)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:06:22 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (93)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:06:22 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (93)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:09:56 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yiiblog\framework\web\CController.php:1121
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#10 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiblog/index.php/comment/delete/158
+HTTP_REFERER=http://localhost/yiiblog/index.php/comment/158
+---
+2025/03/19 16:10:14 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yiiblog\framework\web\CController.php:1121
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#10 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiblog/index.php/comment/delete/157
+HTTP_REFERER=http://localhost/yiiblog/index.php/comment/157
+---
+2025/03/19 16:10:48 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (93)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:10:48 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (93)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:10:48 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (93)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:21:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT t.name, COUNT(pt.tag_id) AS frequency FROM `tbl_tag` `t` INNER JOIN post_tag pt ON t.id = pt.tag_id 
+						INNER JOIN post p ON pt.post_id = p.id WHERE p.status = :status GROUP BY t.name ORDER BY frequency DESC LIMIT 20.
+in C:\xampp\htdocs\yiiblog\protected\models\Tag.php (152)
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (12)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+2025/03/19 16:21:29 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT t.name, COUNT(pt.tag_id) AS frequency FROM `tbl_tag` `t` INNER JOIN post_tag pt ON t.id = pt.tag_id 
+						INNER JOIN post p ON pt.post_id = p.id WHERE p.status = :status GROUP BY t.name ORDER BY frequency DESC LIMIT 20 in C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(152): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(12): Tag->findTagWeights(20)
+#5 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#7 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(53): CController->render('view', Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionView()
+#13 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('view')
+#22 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/view')
+#23 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yiiblog/index.php/post/16
+HTTP_REFERER=http://localhost/yiiblog/index.php/post/index?tag=yii
+---
+2025/03/19 16:25:13 [error] [php] Trying to access array offset on value of type int (C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php:30)
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#1 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): TagCloud->run()
+#2 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): PostController->widget()
+#3 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): PostController->renderInternal()
+#5 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): PostController->renderFile()
+#6 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): PostController->render()
+#7 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#10 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): PostController->runActionWithFilters()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): PostController->run()
+#17 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\yiiblog\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiblog/index.php/post/index
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (30)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (143)
+2025/03/19 16:25:58 [error] [php] Array to string conversion (C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php:18)
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#1 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): TagCloud->run()
+#2 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): PostController->widget()
+#3 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): PostController->renderInternal()
+#5 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): PostController->renderFile()
+#6 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): PostController->render()
+#7 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#10 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): PostController->runActionWithFilters()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): PostController->run()
+#17 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\yiiblog\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiblog/index.php/post/index
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (18)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (143)
+2025/03/19 16:28:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT t.name, COUNT(pt.tag_id) AS frequency FROM `tbl_tag` `t` INNER JOIN post_tag pt ON t.id = pt.tag_id 
+						INNER JOIN post p ON pt.post_id = p.id WHERE p.status = :status GROUP BY t.name ORDER BY frequency DESC LIMIT 20.
+in C:\xampp\htdocs\yiiblog\protected\models\Tag.php (152)
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (11)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+2025/03/19 16:28:06 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT t.name, COUNT(pt.tag_id) AS frequency FROM `tbl_tag` `t` INNER JOIN post_tag pt ON t.id = pt.tag_id 
+						INNER JOIN post p ON pt.post_id = p.id WHERE p.status = :status GROUP BY t.name ORDER BY frequency DESC LIMIT 20 in C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(152): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#5 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#7 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#13 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#22 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#23 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:28:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT t.name, COUNT(pt.tag_id) AS frequency FROM `tbl_tag` `t` INNER JOIN post_tag pt ON t.id = pt.tag_id 
+						INNER JOIN post p ON pt.post_id = p.id WHERE p.status = :status GROUP BY t.name ORDER BY frequency DESC LIMIT 20.
+in C:\xampp\htdocs\yiiblog\protected\models\Tag.php (152)
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (11)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+2025/03/19 16:28:24 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT t.name, COUNT(pt.tag_id) AS frequency FROM `tbl_tag` `t` INNER JOIN post_tag pt ON t.id = pt.tag_id 
+						INNER JOIN post p ON pt.post_id = p.id WHERE p.status = :status GROUP BY t.name ORDER BY frequency DESC LIMIT 20 in C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(152): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#5 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#7 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#13 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#22 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#23 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:28:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT t.name, COUNT(pt.tag_id) AS frequency FROM `tbl_tag` `t` INNER JOIN post_tag pt ON t.id = pt.tag_id 
+						INNER JOIN post p ON pt.post_id = p.id WHERE p.status = :status GROUP BY t.name ORDER BY frequency DESC LIMIT 20.
+in C:\xampp\htdocs\yiiblog\protected\models\Tag.php (152)
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (11)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+2025/03/19 16:28:29 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT t.name, COUNT(pt.tag_id) AS frequency FROM `tbl_tag` `t` INNER JOIN post_tag pt ON t.id = pt.tag_id 
+						INNER JOIN post p ON pt.post_id = p.id WHERE p.status = :status GROUP BY t.name ORDER BY frequency DESC LIMIT 20 in C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(152): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#5 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#7 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#13 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#22 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#23 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:32:23 [error] [php] Trying to access array offset on value of type int (C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#1 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): TagCloud->run()
+#2 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): PostController->widget()
+#3 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): PostController->renderInternal()
+#5 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): PostController->renderFile()
+#6 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): PostController->render()
+#7 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#10 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): PostController->runActionWithFilters()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): PostController->run()
+#17 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\yiiblog\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiblog/index.php/post/index
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (15)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (143)
+2025/03/19 16:32:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT * FROM `tbl_tag` `t` WHERE EXISTS (
+				SELECT 1 FROM post_tag pt 
+				INNER JOIN post p ON pt.post_id = p.id 
+				WHERE pt.tag_id = t.id AND p.status = 2
+			) ORDER BY frequency DESC LIMIT 20.
+in C:\xampp\htdocs\yiiblog\protected\models\Tag.php (149)
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (11)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+2025/03/19 16:32:36 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT * FROM `tbl_tag` `t` WHERE EXISTS (
+				SELECT 1 FROM post_tag pt 
+				INNER JOIN post p ON pt.post_id = p.id 
+				WHERE pt.tag_id = t.id AND p.status = 2
+			) ORDER BY frequency DESC LIMIT 20 in C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(149): CActiveRecord->findAll(Array)
+#4 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#5 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#7 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#13 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#22 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#23 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:32:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT * FROM `tbl_tag` `t` WHERE EXISTS (
+				SELECT 1 FROM post_tag pt 
+				INNER JOIN post p ON pt.post_id = p.id 
+				WHERE pt.tag_id = t.id AND p.status = 2
+			) ORDER BY frequency DESC LIMIT 20.
+in C:\xampp\htdocs\yiiblog\protected\models\Tag.php (149)
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (11)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+2025/03/19 16:32:44 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT * FROM `tbl_tag` `t` WHERE EXISTS (
+				SELECT 1 FROM post_tag pt 
+				INNER JOIN post p ON pt.post_id = p.id 
+				WHERE pt.tag_id = t.id AND p.status = 2
+			) ORDER BY frequency DESC LIMIT 20 in C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(149): CActiveRecord->findAll(Array)
+#4 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#5 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#7 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#13 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#22 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#23 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:32:48 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT * FROM `tbl_tag` `t` WHERE EXISTS (
+				SELECT 1 FROM post_tag pt 
+				INNER JOIN post p ON pt.post_id = p.id 
+				WHERE pt.tag_id = t.id AND p.status = 2
+			) ORDER BY frequency DESC LIMIT 20.
+in C:\xampp\htdocs\yiiblog\protected\models\Tag.php (149)
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (11)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+2025/03/19 16:32:48 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT * FROM `tbl_tag` `t` WHERE EXISTS (
+				SELECT 1 FROM post_tag pt 
+				INNER JOIN post p ON pt.post_id = p.id 
+				WHERE pt.tag_id = t.id AND p.status = 2
+			) ORDER BY frequency DESC LIMIT 20 in C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(149): CActiveRecord->findAll(Array)
+#4 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#5 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#7 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#13 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#22 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#23 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:34:31 [error] [php] Trying to access array offset on value of type int (C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#1 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): TagCloud->run()
+#2 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): PostController->widget()
+#3 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): PostController->renderInternal()
+#5 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): PostController->renderFile()
+#6 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): PostController->render()
+#7 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#10 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): PostController->runActionWithFilters()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): PostController->run()
+#17 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\yiiblog\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiblog/index.php/post/index?tag=yii
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (15)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (143)
+2025/03/19 16:34:50 [error] [php] Undefined index: name (C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#1 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): TagCloud->run()
+#2 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): PostController->widget()
+#3 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): PostController->renderInternal()
+#5 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): PostController->renderFile()
+#6 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): PostController->render()
+#7 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#10 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): PostController->runActionWithFilters()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): PostController->run()
+#17 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\yiiblog\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiblog/index.php/post/index?tag=yii
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (15)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (143)
+2025/03/19 16:35:26 [error] [php] Array to string conversion (C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php:18)
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#1 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): TagCloud->run()
+#2 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): PostController->widget()
+#3 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): PostController->renderInternal()
+#5 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): PostController->renderFile()
+#6 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): PostController->render()
+#7 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): PostController->runAction()
+#10 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): PostController->filterAccessControl()
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): PostController->runActionWithFilters()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): PostController->run()
+#17 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\yiiblog\index.php(13): CWebApplication->run()
+REQUEST_URI=/yiiblog/index.php/post/index?tag=yii
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (18)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (143)
+2025/03/19 16:39:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT `t`.`id`, `t`.`name`, `t`.`frequency` FROM `tbl_tag` `t` INNER JOIN post_tag pt ON t.id = pt.tag_id 
+                       INNER JOIN post p ON pt.post_id = p.id WHERE p.status = 2 GROUP BY t.id ORDER BY COUNT(*) DESC LIMIT 20.
+in C:\xampp\htdocs\yiiblog\protected\models\Tag.php (150)
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (11)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+2025/03/19 16:39:07 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SELECT `t`.`id`, `t`.`name`, `t`.`frequency` FROM `tbl_tag` `t` INNER JOIN post_tag pt ON t.id = pt.tag_id 
+                       INNER JOIN post p ON pt.post_id = p.id WHERE p.status = 2 GROUP BY t.id ORDER BY COUNT(*) DESC LIMIT 20 in C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1359): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(150): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#5 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#7 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#13 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#22 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#23 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yiiblog/index.php/post/index?tag=yii
+HTTP_REFERER=http://localhost/yiiblog/index.php/post/index
+---
+2025/03/19 16:40:18 [error] [exception.CException] CException: Property "Tag.posts" is not defined. in C:\xampp\htdocs\yiiblog\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(145): CComponent->__get('posts')
+#1 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(148): CActiveRecord->__get('posts')
+#2 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#3 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#5 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#10 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#21 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiiblog/index.php/post/index?tag=yii
+HTTP_REFERER=http://localhost/yiiblog/index.php/post/index
+---
+2025/03/19 16:40:57 [error] [exception.CException] CException: Property "Tag.posts" is not defined. in C:\xampp\htdocs\yiiblog\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(145): CComponent->__get('posts')
+#1 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(148): CActiveRecord->__get('posts')
+#2 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#3 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#5 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#10 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#21 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiiblog/index.php/post/index?tag=yii
+HTTP_REFERER=http://localhost/yiiblog/index.php/post/index
+---
+2025/03/19 16:40:58 [error] [exception.CException] CException: Property "Tag.posts" is not defined. in C:\xampp\htdocs\yiiblog\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(145): CComponent->__get('posts')
+#1 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(148): CActiveRecord->__get('posts')
+#2 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#3 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#5 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#10 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#21 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiiblog/index.php/post/index?tag=yii
+HTTP_REFERER=http://localhost/yiiblog/index.php/post/index
+---
+2025/03/19 16:41:00 [error] [exception.CException] CException: Property "Tag.posts" is not defined. in C:\xampp\htdocs\yiiblog\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(145): CComponent->__get('posts')
+#1 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(148): CActiveRecord->__get('posts')
+#2 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#3 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#5 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#10 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#21 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:41:02 [error] [exception.CException] CException: Property "Tag.posts" is not defined. in C:\xampp\htdocs\yiiblog\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(145): CComponent->__get('posts')
+#1 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(148): CActiveRecord->__get('posts')
+#2 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#3 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#5 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#10 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#21 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:41:03 [error] [exception.CException] CException: Property "Tag.posts" is not defined. in C:\xampp\htdocs\yiiblog\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(145): CComponent->__get('posts')
+#1 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(148): CActiveRecord->__get('posts')
+#2 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#3 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#5 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#10 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#21 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:41:50 [error] [exception.CDbException] CDbException: Relation "posts" is not defined in active record class "Tag". in C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveFinder.php:227
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveFinder.php(300): CActiveFinder->buildJoinTree(Object(CJoinElement), 'posts')
+#1 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree(Object(CJoinElement), Array)
+#2 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(915): CActiveFinder->__construct(Object(Tag), Array)
+#3 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1363): CActiveRecord->getActiveFinder(Array)
+#4 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(1478): CActiveRecord->query(Object(CDbCriteria), true)
+#5 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(142): CActiveRecord->findAll()
+#6 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#7 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#8 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#9 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#10 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#11 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#14 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#15 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#22 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#24 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#25 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#26 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:45:07 [error] [exception.CException] CException: Property "Tag.posts" is not defined. in C:\xampp\htdocs\yiiblog\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(145): CComponent->__get('posts')
+#1 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(152): CActiveRecord->__get('posts')
+#2 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#3 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#5 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#10 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#21 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:45:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'blog.post_tag' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `post_tag`.
+in C:\xampp\htdocs\yiiblog\protected\models\Tag.php (153)
+in C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php (11)
+in C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php (27)
+2025/03/19 16:45:31 [error] [exception.CDbException] CDbException: The relation "posts" in active record class "Tag" is not specified correctly: the join table "post_tag" given in the foreign key cannot be found in the database. in C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveFinder.php:548
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveFinder.php(503): CJoinElement->applyLazyCondition(Object(CJoinQuery), Object(Tag))
+#1 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveFinder.php(163): CJoinElement->lazyFind(Object(Tag))
+#2 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(283): CActiveFinder->lazyFind(Object(Tag))
+#3 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(143): CActiveRecord->getRelated('posts')
+#4 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(153): CActiveRecord->__get('posts')
+#5 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#6 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#7 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#8 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#9 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#10 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#12 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#13 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#18 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#23 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#24 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:45:40 [error] [exception.CException] CException: Property "Tag.posts" is not defined. in C:\xampp\htdocs\yiiblog\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\db\ar\CActiveRecord.php(145): CComponent->__get('posts')
+#1 C:\xampp\htdocs\yiiblog\protected\models\Tag.php(152): CActiveRecord->__get('posts')
+#2 C:\xampp\htdocs\yiiblog\protected\components\TagCloud.php(11): Tag->findTagWeights(20)
+#3 C:\xampp\htdocs\yiiblog\framework\zii\widgets\CPortlet.php(97): TagCloud->renderContent()
+#4 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(182): CPortlet->run()
+#5 C:\xampp\htdocs\yiiblog\protected\views\layouts\column2.php(27): CBaseController->widget('TagCloud', Array)
+#6 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\yiiblog\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CController.php(787): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php(143): CController->render('index', Array)
+#10 C:\xampp\htdocs\yiiblog\framework\web\actions\CInlineAction.php(49): PostController->actionIndex()
+#11 C:\xampp\htdocs\yiiblog\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('index')
+#20 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('post/index')
+#21 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/yiiblog/index.php/post/index
+HTTP_REFERER=http://localhost/yiiblog/index.php
+---
+2025/03/19 16:52:14 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in C:\xampp\htdocs\yiiblog\framework\web\CController.php:1121
+Stack trace:
+#0 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiblog\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiblog\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiblog\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiblog\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiblog\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(282): CController->run('delete')
+#9 C:\xampp\htdocs\yiiblog\framework\web\CWebApplication.php(141): CWebApplication->runController('comment/delete')
+#10 C:\xampp\htdocs\yiiblog\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yiiblog\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yiiblog/index.php/comment/delete/150
+HTTP_REFERER=http://localhost/yiiblog/index.php/comment/150
+---
+2025/03/19 16:56:38 [warning] [application] Failed to set unsafe attribute "id" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:38 [warning] [application] Failed to set unsafe attribute "create_time" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:41 [warning] [application] Failed to set unsafe attribute "id" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:41 [warning] [application] Failed to set unsafe attribute "create_time" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:46 [warning] [application] Failed to set unsafe attribute "id" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:46 [warning] [application] Failed to set unsafe attribute "create_time" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:50 [warning] [application] Failed to set unsafe attribute "id" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:50 [warning] [application] Failed to set unsafe attribute "create_time" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:52 [warning] [application] Failed to set unsafe attribute "id" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:52 [warning] [application] Failed to set unsafe attribute "create_time" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:55 [warning] [application] Failed to set unsafe attribute "id" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:55 [warning] [application] Failed to set unsafe attribute "create_time" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:57 [warning] [application] Failed to set unsafe attribute "id" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:57 [warning] [application] Failed to set unsafe attribute "create_time" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:59 [warning] [application] Failed to set unsafe attribute "id" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:56:59 [warning] [application] Failed to set unsafe attribute "create_time" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:02 [warning] [application] Failed to set unsafe attribute "id" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:02 [warning] [application] Failed to set unsafe attribute "create_time" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:06 [warning] [application] Failed to set unsafe attribute "id" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:06 [warning] [application] Failed to set unsafe attribute "create_time" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:08 [warning] [application] Failed to set unsafe attribute "id" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:08 [warning] [application] Failed to set unsafe attribute "create_time" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:12 [warning] [application] Failed to set unsafe attribute "id" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:12 [warning] [application] Failed to set unsafe attribute "create_time" of "Comment".
+in C:\xampp\htdocs\yiiblog\protected\controllers\CommentController.php (151)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:34 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (69)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:34 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (69)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:34 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (69)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:53 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (93)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:53 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (93)
+in C:\xampp\htdocs\yiiblog\index.php (13)
+2025/03/19 16:57:53 [warning] [application] Failed to set unsafe attribute "author_id" of "Post".
+in C:\xampp\htdocs\yiiblog\protected\controllers\PostController.php (93)
+in C:\xampp\htdocs\yiiblog\index.php (13)

@@ -28,7 +28,7 @@
   <!-- Search Section -->
   
   <button class="search-button bg-[#b08968] text-white px-4 py-2 rounded hover:bg-[#8c6a52] mb-4">
-    Advanced Search
+    <i class="fas fa-search mr-2"></i>Advanced Search
   </button>
 
   <div class="search-form hidden mb-6">
