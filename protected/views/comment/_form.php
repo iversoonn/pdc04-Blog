@@ -1,3 +1,4 @@
+<?php if (Yii::app()->user->isGuest): ?> 
 <div class="bg-white p-8 rounded-lg shadow-md max-w-2xl mx-auto">
 
   <?php $form = $this->beginWidget('CActiveForm', array(
@@ -18,20 +19,6 @@
     <?php echo $form->error($model, 'content', array('class' => 'text-red-500 text-sm')); ?>
   </div>
 
-  <!-- Status Field -->
-  <!-- <div class="mb-6">
-    <?php echo $form->labelEx($model, 'status', array('class' => 'block text-gray-700 font-medium mb-2')); ?>
-    <?php echo $form->dropDownList($model, 'status', Lookup::items('PostStatus'), array('class' => 'w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b08968] bg-white')); ?>
-    <?php echo $form->error($model, 'status', array('class' => 'text-red-500 text-sm')); ?>
-  </div> -->
-
-  <!-- Create Time -->
-  <!-- <div class="mb-6">
-    <?php echo $form->labelEx($model, 'create_time', array('class' => 'block text-gray-700 font-medium mb-2')); ?>
-    <?php echo $form->textField($model, 'create_time', array('class' => 'w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b08968]')); ?>
-    <?php echo $form->error($model, 'create_time', array('class' => 'text-red-500 text-sm')); ?>
-  </div> -->
-
   <!-- Author -->
   <div class="mb-6">
     <?php echo $form->labelEx($model, 'author', array('class' => 'block text-gray-700 font-medium mb-2')); ?>
@@ -46,20 +33,6 @@
     <?php echo $form->error($model, 'email', array('class' => 'text-red-500 text-sm')); ?>
   </div>
 
-  <!-- URL -->
-  <!-- <div class="mb-6">
-    <?php echo $form->labelEx($model, 'url', array('class' => 'block text-gray-700 font-medium mb-2')); ?>
-    <?php echo $form->textField($model, 'url', array('size' => 60, 'maxlength' => 128, 'class' => 'w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b08968]')); ?>
-    <?php echo $form->error($model, 'url', array('class' => 'text-red-500 text-sm')); ?>
-  </div> -->
-
-  <!-- Post ID -->
-  <!-- <div class="mb-6">
-    <?php echo $form->labelEx($model, 'post_id', array('class' => 'block text-gray-700 font-medium mb-2')); ?>
-    <?php echo $form->textField($model, 'post_id', array('class' => 'w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b08968]')); ?>
-    <?php echo $form->error($model, 'post_id', array('class' => 'text-red-500 text-sm')); ?>
-  </div> -->
-
   <!-- Submit Button -->
   <div class="text-center">
     <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array(
@@ -70,3 +43,6 @@
   <?php $this->endWidget(); ?>
 
 </div>
+<?php else: ?>
+  <p class="text-gray-600 text-center mt-4">Admin users cannot post comments.</p>
+<?php endif; ?>
