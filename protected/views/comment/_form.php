@@ -44,5 +44,5 @@
 
 </div>
 <?php else: ?>
-  <p class="text-gray-600 text-center mt-4">Admin users cannot post comments.</p>
+  <p class="text-gray-600 text-center mt-4"></p>
 <?php endif; ?>

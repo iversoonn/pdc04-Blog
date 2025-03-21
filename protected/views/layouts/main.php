@@ -65,7 +65,7 @@
         <?php $this->widget('zii.widgets.CMenu', array(
           'items' => array(
             array('label' => '<i class="fas fa-home"></i> Home', 'url' => array('/post/index')),
-            array('label' => '<i class="fas fa-info-circle"></i> About', 'url' => array('/site/page', 'view' => 'about')),
+            // array('label' => '<i class="fas fa-info-circle"></i> About', 'url' => array('/site/page', 'view' => 'about')),
             array('label' => '<i class="fas fa-envelope"></i> Contact', 'url' => array('/site/contact')),
             array('label' => '<i class="fas fa-sign-in-alt"></i> Login', 'url' => array('/site/login'), 'visible' => Yii::app()->user->isGuest),
             array('label' => '<i class="fas fa-sign-out-alt"></i> Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
